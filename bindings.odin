@@ -6,12 +6,11 @@ when ODIN_OS == .Darwin  do foreign import tracy "tracy.dylib"
 when ODIN_OS == .Windows do foreign import tracy "tracy.lib"
 when ODIN_OS == .Linux   do foreign import tracy "tracy.so"
 
-TracyPlotFormatEnum :: enum i32
-{
+TracyPlotFormatEnum :: enum i32 {
     TracyPlotFormatNumber,
     TracyPlotFormatMemory,
     TracyPlotFormatPercentage,
-    TracyPlotFormatWatt
+    TracyPlotFormatWatt,
 }
 
 ___tracy_source_location_data :: struct {
